@@ -33,9 +33,6 @@ namespace BookStore.Controllers
                 return await context.ToListAsync();
             }
 
-            Console.WriteLine("test");
-            Console.WriteLine(authorId);
-
             var author = await _authorContext.Author.FindAsync(authorId);
             if (author == null)
             {
